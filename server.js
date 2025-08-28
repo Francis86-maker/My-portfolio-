@@ -7,7 +7,7 @@ const db = new sqlite3.Database('./database.db');
 const saltRounds = 10;
 const adminEmail = "francissalvatore86@gmail.com";
 const adminPassword = "Fransmine6780";
-
+const port = 4000;
 const storage = multer.diskStorage({
 destination: (req, file, cb) => {
 cb(null, 'uploads/');
@@ -126,4 +126,7 @@ return res.status(500).json({ message: 'Database error'});
 }
 if (!rows) return res.status(401).json({ message: 'Products not found'});
 }
+});
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
