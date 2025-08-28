@@ -76,7 +76,7 @@
    </section>    
    <button class="show-form-btn" onclick="toggleForm('registerForm')">Register</button>    
      <form id="registerForm" method="POST"    
-     action="#">    
+     action="http://localhost:4000/register">    
       <label for="registerUserName">Username:</label>    
       <input type="text" id="registerUsername"    
       name="username" placeholder="Enter your username"/>    
@@ -89,7 +89,7 @@
       <button type="submit">Register</button>    
     </form>    
     <form id="loginForm" method="POST"    
-    action="#">    
+    action="http://localhost:4000/login">    
      <label for="loginEmail">LoginEmail:</label>    
      <input type="email" id="loginEmail"    
      name="email" required/>    
@@ -100,7 +100,7 @@
     </form>    
     <button class="show-form-btn" onclick="toggleForm('adminLoginForm')">adminLoginForm</button>    
      <form id="adminLoginForm" method="POST"     
-      action="#">    
+      action="http://localhost:4000/admin/login">    
      <label for="adminEmail">adminEmail:</label>    
       <input type="email" id="adminEmail"    
       name="adminEmail" required/>    
@@ -111,23 +111,23 @@
      </form>    
      <button class="show-form-btn" onclick="toggleForm('productForm')">productForm</button>    
       <form id="productForm" method="POST"    
-       action="#">    
+       action="http://localhost:4000/product">    
       <label for="productName">productName:</label>    
       <input type="text" id="productName"    
       name="productName" required/>    
      <label for="productPrice">productPrice:</label>    
       <input type="number" id="productPrice"    
       name="productPrice" required/>    
-     <button type="submit">productForm</button>    
-     <table>    
-        <h4>productList</h4>    
-          <tr>    
-           <th>name</th>    
-           <th>price</th>    
-           <th>description</th>    
-          </tr>    
-     </table>    
-   </form>    
+     <button type="submit">productForm</button>      
+   </form>  
+    <table>
+       <tr>
+        <th>name</th>
+        <th>description</th>
+        <th>price</th>
+        <th>category</th>
+       </tr>
+    </table>
    <footer>    
       <p>Please come back again</p>    
    </footer>    
